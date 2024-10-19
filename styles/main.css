@@ -60,6 +60,11 @@ main {
     width: 300px;
 }
 
+#material-editor, #render-settings {
+    margin-top: 20px;
+}
+
+/* モバイル対応のスタイル */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
@@ -68,5 +73,22 @@ main {
 
     #properties {
         width: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* タッチ操作のサポート */
+@media (hover: none) and (pointer: coarse) {
+    button, input[type="button"] {
+        min-height: 44px;
+        min-width: 44px;
     }
 }
